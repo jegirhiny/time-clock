@@ -1,0 +1,52 @@
+.full-screen-center {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.opaque {
+    background-color: rgba(30, 30, 30, 0.85);
+}
+
+.combo-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text {
+    color: #ffffff;
+    text-align: center;
+}
+
+.combo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: rgba(30, 30, 30);
+    font-size: 80px;
+    width: 450px;
+    height: 100px;
+    margin: 20px;
+}
+
+.keypad {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 510px;
+    height: fit-content;
+}
+
+.key {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 25px;
+}
