@@ -4,7 +4,7 @@ import './login.styles.css';
 
 const Login = () => {
     const [ combo, setCombo ] = useState('');
-    const keys = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+    const keys = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
     // const { state } = useLocation();
 
     const submitKey = (key) => {
@@ -17,10 +17,14 @@ const Login = () => {
         const pressed = e.key, length = combo.length;
 
         if(pressed === 'Backspace' && length > 0) {
-            setCombo(combo.substring(0, length - 1));
+            deletePrevious();
         } else if(keys.includes(pressed) && length !== 4) {
             setCombo(combo + pressed);
         }
+    }
+
+    const deletePrevious = () => {
+        setCombo(combo.substring(0, combo.length - 1));
     }
 
     useEffect(() => {
@@ -39,6 +43,9 @@ const Login = () => {
             </div>
             <div className='keypad'>
                 {keys.map((key, index) => <button key={index} className='key' onClick={() => submitKey(key)} value={key}>{key}</button>)}
+                <button className='key'style={{visibility: 'hidden'}}>DELETE</button>
+                <button className='key' onClick={() => submitKey('0')} value={'0'}>0</button>
+                <button className='key' onClick={deletePrevious}>DELETE</button>
             </div>
         </div>
     );
