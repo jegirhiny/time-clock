@@ -8,7 +8,7 @@
 }
 
 .opaque {
-    background-color: rgba(30, 30, 30, 0.85);
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
 .combo-display {
@@ -26,8 +26,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50px;
-    background-color: rgba(30, 30, 30);
     font-size: 80px;
     width: 450px;
     height: 100px;
@@ -37,7 +35,7 @@
 .keypad {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-end;
     width: 510px;
     height: fit-content;
 }
@@ -47,6 +45,18 @@
     height: 150px;
     margin: 10px;
     cursor: pointer;
-    border-radius: 30px;
+    border-radius: 100%;
     font-size: 25px;
+    border: none;
+}
+
+.delete {
+    color: #ffffff;
+    font-size: 75px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.key:hover, .delete:hover {
+    background-color: #d3d3d3;
 }
