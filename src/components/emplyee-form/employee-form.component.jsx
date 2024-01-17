@@ -12,6 +12,7 @@ const EmployeeForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        e.target.reset();
 
         createEmployee(formData);
     }
