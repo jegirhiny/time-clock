@@ -1,20 +1,17 @@
 import './employee-card.styles.css';
-import { useNavigate } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
-const EmployeeCard = ({ employee }) => {
-    const { id, firstName, lastName, userImg } = employee;
+const EmployeeCard = ({employee}) => {
     const navigate = useNavigate();
+    const {firstName, lastName} = employee;
   
     const handleClick = () => {
-        navigate(`/login/${id}`, { state: { employee : employee }});
+        navigate('/login', { state: { employee : {employee} }});
     };
 
     return (
-        <div>
-            <div>
-                <img src={userImg} alt={`${firstName} ${lastName} Photo`} />
-                <h2>{`${firstName} ${lastName}`}</h2>
-            </div>
+        <div className='card'>
+            <h2>{`${firstName} ${lastName}`}</h2>
             <button onClick={handleClick}>Login</button>
         </div>
     );
