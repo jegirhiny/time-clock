@@ -5,7 +5,17 @@ const hasEmployees = () => {
 }
 
 const getEmployees = () => {
-    return JSON.parse(localStorage.getItem('employees'));
+    return JSON.parse(localStorage.getItem('employees')) || [];
+}
+
+const getEmployeeByName = (value) => {
+    const employees = getEmployees();
+
+    return employees.filter((employee) => {
+        const fullName = employee.firstName + employee.lastName;
+
+        return fullName.includes(value.replace(' ', ''));
+    }, []);
 }
 
 const createEmployee = ({firstName, lastName, password, isWorking}) => {
@@ -18,6 +28,14 @@ const createEmployee = ({firstName, lastName, password, isWorking}) => {
     }
 }
 
+const getEmployeeIndex = (id) => {
+    return getEmployees().findIndex((employee) => employee.id === id);
+}
+
+const removeEmployee = (id) => {
+    localStorage.setItem('employees', JSON.stringify(getEmployees().filter((employee) => employee.id !== id)));
+}
+
 const setIsWorking = (id) => {
     const employee = (JSON.parse(localStorage.getItem('employees'))).find((employee) => employee.id === id);
     employee.isWorking = !employee.isWorking;
@@ -26,7 +44,7 @@ const setIsWorking = (id) => {
 }
 
 const getIsWorking = (id) => {
-    const employee = (JSON.parse(localStorage.getItem('employees'))).filter((employee) => employee.id === employee);
+    // const employee = (JSON.parse(localStorage.getItem('employees'))).filter((employee) => employee.id === employee);
 }
 
-export { hasEmployees, getEmployees, createEmployee, setIsWorking, getIsWorking};
+export { hasEmployees, getEmployees, getEmployeeByName, createEmployee, setIsWorking, getIsWorking, removeEmployee};

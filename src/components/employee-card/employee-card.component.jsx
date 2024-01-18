@@ -1,7 +1,8 @@
 import './employee-card.styles.css';
 import {useNavigate} from 'react-router-dom';
+import {removeEmployee} from '../../static/employee-utils.js';
 
-const EmployeeCard = ({employee}) => {
+const EmployeeCard = ({employee, showDelete, showLogin}) => {
     const navigate = useNavigate();
     const {firstName, lastName} = employee;
   
@@ -12,7 +13,8 @@ const EmployeeCard = ({employee}) => {
     return (
         <div className='card'>
             <h2>{`${firstName} ${lastName}`}</h2>
-            <button onClick={handleClick}>Login</button>
+            {showDelete ? <button onClick={() => removeEmployee(employee.id)}>Remove</button> : null}
+            {showLogin ? <button onClick={handleClick}>Login</button> : null}
         </div>
     );
 }

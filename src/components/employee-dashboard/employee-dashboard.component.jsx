@@ -1,22 +1,26 @@
 import './employee-dashboard.styles.css';
+import { useState } from 'react';
+import {getEmployees, getEmployeeByName} from '../../static/employee-utils.js';
 import EmployeeCard from '../employee-card/employee-card.component.jsx';
-import {hasEmployees, getEmployees} from '../../static/employee-utils.js';
 
 const EmployeeDashboard = () => {
-    if(hasEmployees()) {
-        return (
-            <div className='dashboard'>
-                {
-                    getEmployees().map((employee) => (
-                        <EmployeeCard key={employee.id} employee = {employee} />
-                    ))
-                }
-            </div>
-        )
+    const [employees, setEmployees] = useState(getEmployees(), []);
+
+    const search = (e) => {
+        setEmployees(getEmployeeByName(e.target.value));
     }
 
     return (
-        <h3>No Employees</h3>
+        <div className='dashboard'>
+            <input type="text" onChange={search}/>
+            {employees.length !== 0 ? 
+                (employees.map((employee) => (
+                    <EmployeeCard key={employee.id} showDelete={false} showLogin={true} employee={employee} />
+                )) 
+            ) : (
+                <h3>List Is Empty</h3>
+            )}
+        </div>
     )
 }
 
