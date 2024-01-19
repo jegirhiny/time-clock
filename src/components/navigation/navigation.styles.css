@@ -5,14 +5,3 @@
     height: 5vh;
     width: 100vw;
 }
-
-.nav-bar > button {
-    cursor: pointer;
-    border: none;
-    color: #ffffff;
-    background-color: #1e1e1e;
-    border-radius: 5px;
-    height: fit-content;
-    width: fit-content;
-    padding: 1vh 10vw;
-}
