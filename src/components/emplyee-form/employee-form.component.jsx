@@ -24,8 +24,8 @@ const EmployeeForm = () => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <input type="text" name='firstName' onChange={handleChange} placeholder='First Name'/>
-            <input type="text" name='lastName' onChange={handleChange} placeholder='Last Name'/>
+            <input type="text" name='firstName' onChange={handleChange} placeholder='First Name' required/>
+            <input type="text" name='lastName' onChange={handleChange} placeholder='Last Name' required/>
             <input type="submit" />
         </form>
     )
