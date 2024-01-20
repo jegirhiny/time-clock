@@ -4,7 +4,7 @@ import {getEmployees, getEmployeeByName} from '../../static/employee-utils.js';
 import EmployeeCard from '../employee-card/employee-card.component.jsx';
 
 const EmployeeDashboard = () => {
-    const [employees, setEmployees] = useState(getEmployees(), []);
+    const [employees, setEmployees] = useState(getEmployees());
 
     const search = (e) => {
         setEmployees(getEmployeeByName(e.target.value));
@@ -12,7 +12,7 @@ const EmployeeDashboard = () => {
 
     return (
         <div className='dashboard'>
-            <input type="text" onChange={search}/>
+            <input type="text" onChange={search} placeholder='Search for Employee'/>
             {employees.length !== 0 ? 
                 (employees.map((employee) => (
                     <EmployeeCard key={employee.id} showDelete={false} showLogin={true} employee={employee} />

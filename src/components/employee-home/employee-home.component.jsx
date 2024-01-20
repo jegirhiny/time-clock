@@ -1,15 +1,29 @@
 import './employee-home.styles.css';
-import {useLocation} from "react-router-dom";
-import {setIsWorking} from '../../static/employee-utils.js';
+import { useLocation, useNavigate } from "react-router-dom";
+import { logEmployeeTime, getEmployeeById } from '../../static/employee-utils.js';
+import { getEmployeeTime } from '../../static/time-utils.js';
+import { useState } from 'react';
 
 const EmployeeHome = () => {
+    const navigate = useNavigate();
     const {state} = useLocation();
-    const {employee} = state.employee;
+    const employee = getEmployeeById(state.id);
+    const [working, setWorking] = useState(employee.isWorking);
+
+    const updateWorking = () => {
+        setWorking((isWorking) => !isWorking);
+        logEmployeeTime(employee.id, getEmployeeTime());
+    }
+
+    const toDashboard = () => {
+        navigate('/');
+    }
 
     return (
         <div>
             <h3>{`Welcome back, ${employee.firstName}.`}</h3>
-            <button onClick={() => setIsWorking(employee.id)}>Update Status</button>
+            <button onClick={updateWorking}>{working ? "Clock Out" : "Clock In"}</button>
+            <button onClick={toDashboard}>Logout</button>
         </div>
     )
 }

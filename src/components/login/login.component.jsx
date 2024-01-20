@@ -1,18 +1,19 @@
 import './login.styles.css';
 import {useLocation, useNavigate} from "react-router-dom";
 import {useState} from 'react';
+import { getEmployeeById } from '../../static/employee-utils';
 
 const Login = () => {
-    const navigate = useNavigate();
     const {state} = useLocation();
-    const {employee} = state.employee;
+    const navigate = useNavigate();
+    const employee = getEmployeeById(state.id);
     const [password, setPassword] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
         if(employee.password === password) {
-            navigate('/employee', { state: { employee : {employee} }});
+            navigate('/employee', { state: { id : employee.id }});
         }
     }
 

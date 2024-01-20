@@ -1,6 +1,7 @@
 import './navigation.styles.css';
-import {useNavigate} from "react-router-dom";
-import {useState, useEffect} from 'react';
+import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from 'react';
+import { getTime } from '../../static/time-utils';
 
 const Navigation = () => {
     const navigate = useNavigate();
@@ -13,16 +14,6 @@ const Navigation = () => {
 
         return () => clearInterval(id);
     }, []);
-
-    function getTime() {
-        const options = {
-            hour: 'numeric',
-            minute: 'numeric',
-            hour12: true,
-        };
-
-        return new Date().toLocaleTimeString('en-US', options);
-    }
 
     return (
         <div className='nav-bar'>
