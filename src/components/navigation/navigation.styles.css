@@ -6,7 +6,21 @@
     width: 100vw;
 }
 
-.nav-button {
-    padding: 0 1vw;
+.nav-text {
+    margin-left: 0.5vw;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cursor {
     cursor: pointer;
+}
+
+.image {
+    width: 25px;
+    height: fit-content;
 }

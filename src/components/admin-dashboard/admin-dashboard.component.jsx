@@ -14,7 +14,7 @@ const AdminDashboard = () => {
     return (
         <div className='dashboard'>
             <EmployeeForm />
-            <input type="text" onChange={search} placeholder='Search for Employee'/>
+            <input type="text" onChange={search} placeholder='Search Employee'/>
             {
                 employees.map((employee) => (
                     <EmployeeCard key={employee.id} showLogin={false} showDelete={true} employee={employee}/>

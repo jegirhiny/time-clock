@@ -12,7 +12,7 @@ const EmployeeDashboard = () => {
 
     return (
         <div className='dashboard'>
-            <input type="text" onChange={search} placeholder='Search for Employee'/>
+            <input type="text" onChange={search} placeholder='Search Employee'/>
             {employees.length !== 0 ? 
                 (employees.map((employee) => (
                     <EmployeeCard key={employee.id} showDelete={false} showLogin={true} employee={employee} />
