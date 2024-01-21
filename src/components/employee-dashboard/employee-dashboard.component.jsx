@@ -1,10 +1,10 @@
 import './employee-dashboard.styles.css';
 import { useState } from 'react';
-import {getEmployees, getEmployeeByName} from '../../static/employee-utils.js';
+import {getSortedEmployees, getEmployeeByName} from '../../static/employee-utils.js';
 import EmployeeCard from '../employee-card/employee-card.component.jsx';
 
 const EmployeeDashboard = () => {
-    const [employees, setEmployees] = useState(getEmployees());
+    const [employees, setEmployees] = useState(getSortedEmployees());
 
     const search = (e) => {
         setEmployees(getEmployeeByName(e.target.value));

@@ -7,6 +7,8 @@
 }
 
 .nav-text {
+    font-size: 25px;
+    color: #1e1e1e;
     margin-left: 0.5vw;
 }
 
@@ -21,6 +23,6 @@
 }
 
 .image {
-    width: 25px;
+    width: 30px;
     height: fit-content;
 }
