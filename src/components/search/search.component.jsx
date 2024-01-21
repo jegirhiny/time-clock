@@ -7,10 +7,12 @@ const Search = ({ pullRequest }) => {
 
     useEffect(() => {
         pullRequest(getEmployeesByName(search));
-    }, [search, pullRequest])
+    }, [search])
 
     return (
-        <input type="text" onChange={(e) => setSearch(e.target.value)} value={search}/>
+        <div className='container'>
+            <input type="text" onChange={(e) => setSearch(e.target.value)} value={search}/>
+        </div>
     )
 }
 
