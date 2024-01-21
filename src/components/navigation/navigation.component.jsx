@@ -17,8 +17,8 @@ const Navigation = () => {
 
     return (
         <div className='nav-bar'>
-            <button onClick={() => navigate('/admin')}>Admin</button>
-            <button onClick={() => navigate('/')}>Home</button>
+            <button className='nav-button' onClick={() => navigate('/admin')}>Admin</button>
+            <button className='nav-button' onClick={() => navigate('/')}>Home</button>
             <h3>{localTime}</h3>
         </div>
     )

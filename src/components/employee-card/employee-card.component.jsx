@@ -12,9 +12,9 @@ const EmployeeCard = ({employee, showDelete, showLogin}) => {
 
     return (
         <div className='card'>
-            <h2>{`${firstName} ${lastName}`}</h2>
-            {showDelete ? <button onClick={() => removeEmployee(employee.id)}>Remove</button> : null}
-            {showLogin ? <button onClick={toLogin}>Login</button> : null}
+            <h3 className='name-card'>{`${firstName} ${lastName}`}</h3>
+            {showDelete ? <button className='login-button' onClick={() => removeEmployee(employee.id)}>Remove</button> : null}
+            {showLogin ? <button className='login-button' onClick={toLogin}>Login</button> : null}
         </div>
     );
 }

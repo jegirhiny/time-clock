@@ -5,3 +5,8 @@
     height: 5vh;
     width: 100vw;
 }
+
+.nav-button {
+    padding: 0 1vw;
+    cursor: pointer;
+}

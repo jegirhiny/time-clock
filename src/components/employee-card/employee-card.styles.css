@@ -1,6 +1,20 @@
 .card {
     display: flex;
     justify-content: space-between;
-    margin: 3vh 0;
+    border-bottom: 1px solid lightgray;
+    padding: 2vh 2vw;
     width: 500px;
+}
+
+.card:first-of-type {
+    border-top: 1px solid lightgray;
+}
+
+.name-card {
+    font-weight: 500;
+}
+
+.login-button {
+    padding: 0 1vw;
+    cursor: pointer;
 }
