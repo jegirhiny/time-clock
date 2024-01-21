@@ -1,7 +1,7 @@
 import './employee-home.styles.css';
 import { useLocation, useNavigate } from "react-router-dom";
-import { logEmployeeTime, getEmployeeById } from '../../static/employee-utils.js';
 import { getEmployeeTime } from '../../static/time-utils.js';
+import { getEmployeeById, logTime } from '../../static/employee-utils.js';
 import { useState } from 'react';
 
 const EmployeeHome = () => {
@@ -12,7 +12,7 @@ const EmployeeHome = () => {
 
     const updateWorking = () => {
         setWorking((isWorking) => !isWorking);
-        logEmployeeTime(employee.id, getEmployeeTime());
+        logTime(employee.id, getEmployeeTime());
     }
 
     const toDashboard = () => {

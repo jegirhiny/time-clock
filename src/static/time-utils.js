@@ -1,4 +1,4 @@
-function getTime() {
+const getTime = () => {
     const options = {
         hour: 'numeric',
         minute: 'numeric',
@@ -8,7 +8,7 @@ function getTime() {
     return new Date().toLocaleTimeString('en-US', options);
 }
 
-function getEmployeeTime() {
+const getEmployeeTime = () => {
     const date = new Date();
 
     return {
