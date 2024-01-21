@@ -9,8 +9,8 @@ const getEmployees = () => {
     return JSON.parse(localStorage.getItem('employees')) || [];
 }
 
-const getSortedEmployees = () => {
-    return getEmployees().sort((a, b) => {
+const sortEmployees = (employees) => {
+    return employees.sort((a, b) => {
         const nameA = a.lastName.toUpperCase();
         const nameB = b.lastName.toUpperCase();
 
@@ -26,8 +26,8 @@ const getSortedEmployees = () => {
     });
 };
 
-const getEmployeeByName = (value) => {
-    return getEmployees().filter(employee => (employee.firstName + ' ' + employee.lastName).includes(value), []);
+const getEmployeesByName = (value) => {
+    return getEmployees().filter(employee => (employee.firstName + ' ' + employee.lastName).toLowerCase().includes(value.toLowerCase()), []);
 }
 
 const getEmployeeById = (id) => {
@@ -58,4 +58,4 @@ const setIsWorking = (id) => {
     localStorage.setItem('employees', JSON.stringify(getEmployees().map(employee => (employee.id === id) ? { ...employee, isWorking: !employee.isWorking } : employee)));
 }
 
-export { hasEmployees, getEmployees, getSortedEmployees, getEmployeeByName, getEmployeeById, createEmployee, setIsWorking, getIsWorking, removeEmployee, logTime };
+export { hasEmployees, getEmployees, sortEmployees, getEmployeesByName, getEmployeeById, createEmployee, setIsWorking, getIsWorking, removeEmployee, logTime };

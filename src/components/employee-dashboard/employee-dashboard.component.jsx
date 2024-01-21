@@ -1,18 +1,19 @@
 import './employee-dashboard.styles.css';
 import { useState } from 'react';
-import {getSortedEmployees, getEmployeeByName} from '../../static/employee-utils.js';
+import { getEmployees, sortEmployees } from '../../static/employee-utils.js';
 import EmployeeCard from '../employee-card/employee-card.component.jsx';
+import Search from '../search/search.component.jsx';
 
 const EmployeeDashboard = () => {
-    const [employees, setEmployees] = useState(getSortedEmployees());
+    const [employees, setEmployees] = useState(sortEmployees(getEmployees()));
 
-    const search = (e) => {
-        setEmployees(getEmployeeByName(e.target.value));
+    const pullRequest = (employees) => {
+        setEmployees(sortEmployees(employees));
     }
 
     return (
         <div className='dashboard'>
-            <input type="text" onChange={search} placeholder='Search Employee'/>
+            <Search pullRequest={pullRequest} />
             {employees.length !== 0 ? 
                 (employees.map((employee) => (
                     <EmployeeCard key={employee.id} showDelete={false} showLogin={true} employee={employee} />
