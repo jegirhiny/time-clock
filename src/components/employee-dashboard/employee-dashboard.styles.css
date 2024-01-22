@@ -2,6 +2,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-top: 2vh;
+    margin-top: 2vh;
     width: 500px;
 }
