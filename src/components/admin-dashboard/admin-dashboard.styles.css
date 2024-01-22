@@ -1,7 +1,9 @@
 .admin-container {
     display: flex;
-    flex-direction: column;
+    justify-content: space-evenly;
+    flex-direction: row;
     height: 100vh;
+    width: 81vw;
 }
 
 .admin-container > *:not(:first-child) {

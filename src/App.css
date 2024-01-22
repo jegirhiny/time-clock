@@ -12,13 +12,19 @@ button {
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #1e1e1e;
+    transition: all ease-in-out 300ms;
     height: 3vh;
     padding: 0 1vw;
 }
 
+button:hover {
+    transition: all ease-in-out 300ms;
+    background-color: lightgray;
+}
+
 label {
     display: flex;
-    height: 3vh;
+    min-height: 3vh;
     width: fit-content;
     border-bottom: 1px solid #1e1e1e;
     margin-bottom: 1vh;
