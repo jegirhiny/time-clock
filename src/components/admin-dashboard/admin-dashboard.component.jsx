@@ -13,14 +13,18 @@ const AdminDashboard = () => {
     }
 
     return (
-        <div className='dashboard'>
-            <EmployeeForm />
-            <Search pullRequest={pullRequest} />
-            {
-                employees.map((employee) => (
-                    <EmployeeCard key={employee.id} showLogin={false} showDelete={true} employee={employee}/>
-                ))
-            }
+        <div className='admin-dashboard'>
+            <div>
+                <EmployeeForm />
+            </div>
+            <div>
+                <Search pullRequest={pullRequest} />
+                {
+                    employees.map((employee) => (
+                        <EmployeeCard key={employee.id} showLogin={false} showDelete={true} employee={employee}/>
+                    ))
+                }
+            </div>
         </div>
     )
 }

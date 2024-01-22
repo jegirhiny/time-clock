@@ -24,11 +24,14 @@ const EmployeeForm = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input type="text" name='firstName' onChange={handleChange} placeholder='First Name' required/>
-            <input type="text" name='lastName' onChange={handleChange} placeholder='Last Name' required/>
-            <input type="submit" />
-        </form>
+        <div>
+            <form className='employee-form' onSubmit={handleSubmit}>
+                <label className='e-input'>Create Employee</label>
+                <input className='e-field' type="text" name='firstName' onChange={handleChange} placeholder='First Name' required/>
+                <input className='e-field' type="text" name='lastName' onChange={handleChange} placeholder='Last Name' required/>
+                <button className='fit cursor'>Submit</button>
+            </form>
+        </div>
     )
 }
 

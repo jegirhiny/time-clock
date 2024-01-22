@@ -10,9 +10,7 @@ const Search = ({ pullRequest }) => {
     }, [search])
 
     return (
-        <div className='container'>
-            <input type="text" onChange={(e) => setSearch(e.target.value)} value={search}/>
-        </div>
+        <input type="text" className='search-field' onChange={(e) => setSearch(e.target.value)} value={search} placeholder='Employee Name'/>
     )
 }
 

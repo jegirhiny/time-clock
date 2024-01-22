@@ -1,0 +1,7 @@
+.search-field {
+    height: 3vh;
+    width: 500px;
+    padding: 0 2vw;
+    text-align: center;
+    border: 1px solid lightgray;
+}

@@ -13,8 +13,8 @@ const EmployeeCard = ({employee, showDelete, showLogin}) => {
     return (
         <div className='card'>
             <h3 className='name-card'>{`${lastName}, ${firstName}`}</h3>
-            {showDelete ? <button className='login-button' onClick={() => removeEmployee(employee.id)}>Remove</button> : null}
-            {showLogin ? <button className='login-button' onClick={toLogin}>Login</button> : null}
+            {showDelete ? <button className='cursor' onClick={() => removeEmployee(employee.id)}>Remove</button> : null}
+            {showLogin ? <button className='cursor' onClick={toLogin}>Login</button> : null}
         </div>
     );
 }

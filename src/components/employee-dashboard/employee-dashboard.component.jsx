@@ -12,7 +12,7 @@ const EmployeeDashboard = () => {
     }
 
     return (
-        <div className='dashboard'>
+        <div className='employee-dashboard'>
             <Search pullRequest={pullRequest} />
             {employees.length !== 0 ? 
                 (employees.map((employee) => (
