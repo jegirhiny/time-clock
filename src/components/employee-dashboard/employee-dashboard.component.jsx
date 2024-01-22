@@ -4,7 +4,7 @@ import { getEmployees, sortEmployees } from '../../static/employee-utils.js';
 import EmployeeCard from '../employee-card/employee-card.component.jsx';
 import Search from '../search/search.component.jsx';
 
-const EmployeeDashboard = ({showDelete, showLogin}) => {
+const EmployeeDashboard = ({ showLogin=false, showInfo=false, showDelete=false }) => {
     const [employees, setEmployees] = useState(sortEmployees(getEmployees()));
 
     const pullRequest = (employees) => {
@@ -17,7 +17,7 @@ const EmployeeDashboard = ({showDelete, showLogin}) => {
             <Search pullRequest={pullRequest} />
             {employees.length !== 0 ? 
                 (employees.map((employee) => (
-                    <EmployeeCard key={employee.id} showDelete={showDelete} showLogin={showLogin} employee={employee} />
+                    <EmployeeCard key={employee.id} showLogin={showLogin} showInfo={showInfo} showDelete={showDelete} employee={employee} />
                 )) 
             ) : (
                 <h3>List Is Empty</h3>

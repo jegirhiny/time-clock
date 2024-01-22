@@ -1,4 +1,4 @@
-import '../search/search.styles.css';
+import './search.styles.css';
 import { useEffect, useState } from 'react';
 import { getEmployeesByName } from '../../static/employee-utils';
 
