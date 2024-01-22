@@ -24,12 +24,12 @@ const EmployeeForm = () => {
     }
 
     return (
-        <div>
+        <div className='employee-form'>
+            <label>Create Employee</label>
             <form className='employee-form' onSubmit={handleSubmit}>
-                <label className='e-input'>Create Employee</label>
-                <input className='e-field' type="text" name='firstName' onChange={handleChange} placeholder='First Name' required/>
-                <input className='e-field' type="text" name='lastName' onChange={handleChange} placeholder='Last Name' required/>
-                <button className='fit cursor'>Submit</button>
+                <input type="text" name='firstName' onChange={handleChange} placeholder='First Name' required/>
+                <input type="text" name='lastName' onChange={handleChange} placeholder='Last Name' required/>
+                <button className='align-right fit cursor'>Submit</button>
             </form>
         </div>
     )

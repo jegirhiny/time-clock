@@ -1,19 +1,12 @@
 .employee-form {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 175px;
+    align-items: flex-start;
     width: 250px;
 }
 
-.e-input {
-    height: 3vh;
-    border-bottom: 1px solid lightgray;
-}
-
-.e-field {
-    height: 3vh;
-    padding: 0 1vw;
+.employee-form > * {
+    margin-bottom: 1vh;
 }
 
 .fit {

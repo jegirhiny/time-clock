@@ -1,5 +1,9 @@
-.admin-dashboard {
+.admin-container {
     display: flex;
-    justify-content: space-evenly;
-    margin: 5vh 5vw;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.admin-container > *:not(:first-child) {
+    margin-top: 2vh;
 }

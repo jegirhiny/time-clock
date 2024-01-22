@@ -1,9 +1,45 @@
+#root {
+    display: flex;
+    flex-direction: row;
+}
+
 * {
     margin: 0;
     padding: 0;
 }
 
 button {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #1e1e1e;
     height: 3vh;
     padding: 0 1vw;
+}
+
+label {
+    display: flex;
+    height: 3vh;
+    width: fit-content;
+    border-bottom: 1px solid #1e1e1e;
+    margin-bottom: 1vh;
+}
+
+input {
+    display: flex;
+    height: 3vh;
+    text-indent: 1.25vw;
+    border: 1px solid lightgray;
+    width: inherit;
+}
+
+.indent {
+    text-indent: 1.25vw;
+}
+
+.marg-left {
+    margin-left: 1.25vw;
+}
+
+.marg-right {
+    margin-right: 1.25vw;
 }

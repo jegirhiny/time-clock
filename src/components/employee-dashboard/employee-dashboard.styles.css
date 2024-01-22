@@ -1,7 +1,7 @@
 .employee-dashboard {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
+    align-items: flex-start;
+    padding-top: 2vh;
+    width: 500px;
 }

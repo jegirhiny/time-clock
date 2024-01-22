@@ -4,10 +4,12 @@
     border-left: 1px solid lightgray;
     border-right: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
-    padding: 1.5vh 2vw;
+    padding: 1.5vh 0;
     width: 500px;
 }
 
 .name-card {
-    font-weight: 500;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
 }

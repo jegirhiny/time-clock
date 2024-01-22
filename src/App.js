@@ -13,7 +13,7 @@ function App() {
     <BrowserRouter>
       <Navigation />
       <Routes>
-        <Route exact path="/" element={<EmployeeDashboard />} />
+        <Route exact path="/" element={<EmployeeDashboard showDelete={false} showLogin={true} />} />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/employee" element={<EmployeeHome />} />
         <Route exact path="/admin" element={<AdminDashboard />} />
