@@ -1,11 +1,35 @@
 .employee-dashboard {
     display: flex;
+    max-height: 48vh;
+    justify-content: space-between;
+    width: 81vw;
+}
+
+.employee-table {
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
-    overflow: scroll;
-    overflow-x: hidden;
-    height: fit-content;
-    max-height: 98vh;
     margin-top: 2vh;
-    width: 500px;
+    width: 40%;
+}
+
+.employee-top {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: -webkit-fill-available;
+}
+
+.employee-list {
+    width: -webkit-fill-available;
+    border: 1px solid lightgray;
+    overflow-x: hidden;
+    overflow: auto;
+}
+
+.employee-info {
+    border: 1px solid lightgray;
+    margin-top: 6vh;
+    display: flex;
+    width: 55%;
 }

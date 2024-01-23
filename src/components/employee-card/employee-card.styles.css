@@ -1,15 +1,16 @@
 .card {
     display: flex;
     justify-content: space-between;
-    border-left: 1px solid lightgray;
-    border-right: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
     padding: 1.5vh 0;
-    width: 500px;
+    width: -webkit-fill-available;
+}
+
+.card:last-child {
+    border-bottom: none;
 }
 
 .name-card {
     display: flex;
     align-items: center;
-    font-weight: 400;
 }

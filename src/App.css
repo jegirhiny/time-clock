@@ -35,7 +35,10 @@ input {
     height: 3vh;
     text-indent: 1.25vw;
     border: 1px solid lightgray;
-    width: inherit;
+}
+
+h3 {
+    font-weight: 400;
 }
 
 .indent {
@@ -43,9 +46,9 @@ input {
 }
 
 .marg-left {
-    margin-left: 1.25vw;
+    margin-left: 1.5vw;
 }
 
 .marg-right {
-    margin-right: 1.25vw;
+    margin-right: 1.5vw;
 }
