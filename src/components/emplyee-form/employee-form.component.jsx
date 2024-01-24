@@ -8,7 +8,7 @@ const EmployeeForm = () => {
         lastName: '',
         password: '0000',
         status: false,
-        timeWorked: []
+        history: []
     })
 
     const handleSubmit = (e) => {

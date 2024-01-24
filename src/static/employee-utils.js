@@ -34,15 +34,15 @@ const getEmployeeById = (id) => {
     return getEmployees().find(employee => employee.id === id);
 }
 
-const createEmployee = ({firstName, lastName, password, status, timeWorked}) => {
+const createEmployee = ({firstName, lastName, password, status, history}) => {
     const prevEmployees = hasEmployees() ? getEmployees() : [];
-    localStorage.setItem('employees', JSON.stringify([...prevEmployees, {id: uuidv4(), firstName, lastName, password, status, timeWorked}]));
+    localStorage.setItem('employees', JSON.stringify([...prevEmployees, {id: uuidv4(), firstName, lastName, password, status, history}]));
     window.location.reload();
 }
 
 const logTime = (id) => {
     setstatus(id);
-    localStorage.setItem('employees', JSON.stringify(getEmployees().map(employee => (employee.id === id) ? { ...employee, timeWorked: [...employee.timeWorked, {...getEmployeeTime(), status: getstatus(id)}] } : employee)));
+    localStorage.setItem('employees', JSON.stringify(getEmployees().map(employee => (employee.id === id) ? { ...employee, history: [...employee.history, {...getEmployeeTime(), status: getstatus(id)}] } : employee)));
 }
 
 const removeEmployee = (id) => {

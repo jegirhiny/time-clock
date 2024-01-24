@@ -1,8 +1,7 @@
+import TimeCard from '../time-card/time-card.component';
 import './employee-info.styles.css';
 
 const EmployeeInfo = ({ employee }) => {
-    console.log(employee.timeWorked)
-
     if(!employee) {
         return (
             <h3>Employee Not Selected</h3>
@@ -10,13 +9,9 @@ const EmployeeInfo = ({ employee }) => {
     }
 
     return (
-        <div>
-            <h3>{employee.firstName}</h3>
-            {/* {
-                employee.timeWorked.map(() => {
-                    
-                })
-            } */}
+        <div className='info-container'>
+            <h3>{employee.firstName} {employee.lastName}</h3>
+            {employee.history.map((event, index) => <TimeCard key={index} event={event}/>)}
         </div>
     )
 }
