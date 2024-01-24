@@ -7,7 +7,7 @@ const EmployeeForm = () => {
         firstName: '', 
         lastName: '',
         password: '0000',
-        isWorking: false,
+        status: false,
         timeWorked: []
     })
 

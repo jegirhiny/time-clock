@@ -12,7 +12,7 @@ const getEmployeeTime = () => {
     const date = new Date();
 
     return {
-        date: `${date.getMonth() + 1}/${date.getDay()}/${date.getFullYear()}`, 
+        date: `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`, 
         time: getTime()
     }
 }

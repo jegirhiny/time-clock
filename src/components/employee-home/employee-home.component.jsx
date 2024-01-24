@@ -8,7 +8,7 @@ const EmployeeHome = () => {
     const navigate = useNavigate();
     const {state} = useLocation();
     const employee = getEmployeeById(state.id);
-    const [working, setWorking] = useState(employee.isWorking);
+    const [working, setWorking] = useState(employee.status);
 
     const updateWorking = () => {
         setWorking((isWorking) => !isWorking);

@@ -34,15 +34,15 @@ const getEmployeeById = (id) => {
     return getEmployees().find(employee => employee.id === id);
 }
 
-const createEmployee = ({firstName, lastName, password, isWorking, timeWorked}) => {
+const createEmployee = ({firstName, lastName, password, status, timeWorked}) => {
     const prevEmployees = hasEmployees() ? getEmployees() : [];
-    localStorage.setItem('employees', JSON.stringify([...prevEmployees, {id: uuidv4(), firstName, lastName, password, isWorking, timeWorked}]));
+    localStorage.setItem('employees', JSON.stringify([...prevEmployees, {id: uuidv4(), firstName, lastName, password, status, timeWorked}]));
     window.location.reload();
 }
 
 const logTime = (id) => {
-    setIsWorking(id);
-    localStorage.setItem('employees', JSON.stringify(getEmployees().map(employee => (employee.id === id) ? { ...employee, timeWorked: [...employee.timeWorked, {...getEmployeeTime(), isWorking: getIsWorking(id)}] } : employee)));
+    setstatus(id);
+    localStorage.setItem('employees', JSON.stringify(getEmployees().map(employee => (employee.id === id) ? { ...employee, timeWorked: [...employee.timeWorked, {...getEmployeeTime(), status: getstatus(id)}] } : employee)));
 }
 
 const removeEmployee = (id) => {
@@ -50,12 +50,12 @@ const removeEmployee = (id) => {
     window.location.reload();
 }
 
-const getIsWorking = (id) => {
-    return getEmployeeById(id).isWorking;
+const getstatus = (id) => {
+    return getEmployeeById(id).status;
 }
 
-const setIsWorking = (id) => {
-    localStorage.setItem('employees', JSON.stringify(getEmployees().map(employee => (employee.id === id) ? { ...employee, isWorking: !employee.isWorking } : employee)));
+const setstatus = (id) => {
+    localStorage.setItem('employees', JSON.stringify(getEmployees().map(employee => (employee.id === id) ? { ...employee, status: !employee.status } : employee)));
 }
 
-export { hasEmployees, getEmployees, sortEmployees, getEmployeesByName, getEmployeeById, createEmployee, setIsWorking, getIsWorking, removeEmployee, logTime };
+export { hasEmployees, getEmployees, sortEmployees, getEmployeesByName, getEmployeeById, createEmployee, setstatus, getstatus, removeEmployee, logTime };
