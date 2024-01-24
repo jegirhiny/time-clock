@@ -10,7 +10,7 @@ const EmployeeInfo = ({ employee }) => {
 
     return (
         <div className='info-container'>
-            <h3>{employee.firstName} {employee.lastName}</h3>
+            <h3 className='marg-left'>{employee.firstName} {employee.lastName}</h3>
             {employee.history.map((event, index) => <TimeCard key={index} event={event}/>)}
         </div>
     )

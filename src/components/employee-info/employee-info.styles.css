@@ -1,4 +1,10 @@
 .info-container {
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: -webkit-fill-available;
+}
+
+.info-container > * {
     width: -webkit-fill-available;
 }
