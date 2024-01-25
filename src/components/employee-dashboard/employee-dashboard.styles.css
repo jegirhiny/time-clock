@@ -1,6 +1,6 @@
 .employee-dashboard {
     display: flex;
-    max-height: 48vh;
+    height: 48vh;
     justify-content: space-between;
     width: 81vw;
 }
@@ -10,13 +10,14 @@
     flex-direction: column;
     align-items: flex-start;
     margin-top: 2vh;
-    width: 40%;
+    width: 100%;
 }
 
 .employee-top {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    min-height: 4vh;
     width: -webkit-fill-available;
 }
 
@@ -24,6 +25,7 @@
     width: -webkit-fill-available;
     border: 1px solid lightgray;
     overflow-x: hidden;
+    height: -webkit-fill-available;
     overflow: auto;
 }
 
@@ -31,5 +33,5 @@
     border: 1px solid lightgray;
     margin-top: 6vh;
     display: flex;
-    width: 55%;
+    width: 100%;
 }

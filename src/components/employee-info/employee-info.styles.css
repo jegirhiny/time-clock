@@ -1,10 +1,18 @@
 .info-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     width: -webkit-fill-available;
 }
 
 .info-container > * {
+    padding: 1.5vh 0;
+    width: -webkit-fill-available;
+}
+
+.events {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: -webkit-fill-available;
     width: -webkit-fill-available;
 }

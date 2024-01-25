@@ -13,7 +13,7 @@ button {
     border: none;
     border-bottom: 1px solid #1e1e1e;
     transition: all ease-in-out 300ms;
-    height: 3vh;
+    min-height: 3vh;
     padding: 0 1vw;
 }
 
@@ -32,7 +32,7 @@ label {
 
 input {
     display: flex;
-    height: 3vh;
+    min-height: 3vh;
     text-indent: 1.25vw;
     border: 1px solid lightgray;
 }
@@ -51,4 +51,8 @@ h3 {
 
 .marg-right {
     margin-right: 1.5vw;
+}
+
+.marg-bot {
+    margin-bottom: 1vh;
 }
