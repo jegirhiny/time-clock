@@ -19,7 +19,7 @@ const Navigation = () => {
     }, []);
 
     return (
-        <div className='nav-bar'>
+        <div className='marg-right nav-bar'>
             <div className='header'>
                 <label>Clockify Navigation</label>
             </div>

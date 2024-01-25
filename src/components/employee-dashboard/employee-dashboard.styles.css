@@ -1,8 +1,8 @@
 .employee-dashboard {
     display: flex;
-    height: 48vh;
     justify-content: space-between;
-    width: 81vw;
+    height: 48vh;
+    width: 81.5vw;
 }
 
 .employee-table {
