@@ -24,7 +24,6 @@
 .employee-list {
     width: -webkit-fill-available;
     border: 1px solid lightgray;
-    overflow-x: hidden;
     height: -webkit-fill-available;
     overflow: auto;
 }

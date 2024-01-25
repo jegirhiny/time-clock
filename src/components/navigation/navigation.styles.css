@@ -3,24 +3,23 @@
     background-color: #eeeeee;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: space-between;
     padding-left: 2vw;
-    height: 100vh;
+    height: 92vh;
     width: 15vw;
 }
 
 .nav-text {
     font-size: 25px;
     color: #1e1e1e;
-    margin-left: 0.5vw;
 }
 
 .nav-container {
-    margin-bottom: 1vh;
-    width: 12vw;
     height: 4.5vh;
     display: flex;
     align-items: center;
     border-bottom: 1px solid #1e1e1e;
+    width: 10vw;
 }
 
 .cursor {
@@ -35,4 +34,20 @@
 
 .header {
     margin-top: 2vh;
+}
+
+.header > * {
+    margin-bottom: 4vh;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    width: 17vw;
+}
+
+.dark {
+    background-color: lightgray;
 }
