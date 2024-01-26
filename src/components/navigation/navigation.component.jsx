@@ -23,15 +23,15 @@ const Navigation = () => {
             <div className='marg-right nav-bar'>
                 <div className='header'>
                     <label>Clockify Navigation</label>
-                    <div className='nav-container'>
+                    <div style={{cursor: 'default'}} className='nav-container'>
                         <img className='image' src={Clock} alt="Clock Icon" />
                         <h3 className='nav-text'>{localTime}</h3>
                     </div>
-                    <div className='nav-container cursor' onClick={() => navigate('/admin')}>
+                    <div className='nav-container' onClick={() => navigate('/admin')}>
                         <img className='image' src={Cog} alt="Cog Icon" />
                         <h3 className='nav-text'>Admin</h3>
                     </div>
-                    <div className='nav-container cursor' onClick={() => navigate('/')}>
+                    <div className='nav-container' onClick={() => navigate('/')}>
                         <img className='image' src={Home} alt="Home Icon" />
                         <h3 className='nav-text'>Home</h3>
                     </div>

@@ -24,3 +24,7 @@
 .fill > form > * {
     margin-bottom: 2vh;
 }
+
+.error {
+    color: #ff0000;
+}

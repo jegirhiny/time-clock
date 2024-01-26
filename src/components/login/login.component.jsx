@@ -8,6 +8,7 @@ const Login = () => {
     const navigate = useNavigate();
     const employee = getEmployeeById(state.id);
     const [password, setPassword] = useState('');
+    const [isInvalid, setIsInvalid] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -15,6 +16,8 @@ const Login = () => {
         if(employee.password === password) {
             navigate('/employee', { state: { id : employee.id }});
         }
+
+        setIsInvalid(true);
     }
 
     const handleChange = (e) => {
@@ -27,6 +30,7 @@ const Login = () => {
             <form onSubmit={handleSubmit}>
                 <input type="password" maxLength={4} onChange={handleChange} placeholder='Password'/>
                 <button>Submit</button>
+                <h3 className='error'>{isInvalid ? 'Incorrect Password' : null}</h3>
             </form>
         </div>
     );
