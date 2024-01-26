@@ -22,10 +22,13 @@ const Login = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input type="password" maxLength={4} onChange={handleChange}/>
-            <input type="submit" />
-        </form>
+        <div className='fill'>
+            <h3 className='employee-icon'>{employee.firstName.charAt(0)} {employee.lastName.charAt(0)}</h3>
+            <form onSubmit={handleSubmit}>
+                <input type="password" maxLength={4} onChange={handleChange} placeholder='Password'/>
+                <button>Submit</button>
+            </form>
+        </div>
     );
 }
 

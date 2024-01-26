@@ -15,6 +15,7 @@ button {
     transition: all ease-in-out 300ms;
     min-height: 3vh;
     padding: 0 1vw;
+    cursor: pointer;
 }
 
 button:hover {
@@ -33,7 +34,7 @@ label {
 input {
     display: flex;
     min-height: 3vh;
-    text-indent: 1.25vw;
+    padding: 0 1.25vw;
     border: 1px solid lightgray;
 }
 
