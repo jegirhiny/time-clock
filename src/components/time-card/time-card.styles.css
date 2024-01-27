@@ -1,3 +1,17 @@
 .time-card {
     display: flex;
+    padding: 1vh 0;
+}
+
+.time-card > * {
+    text-align: center;
+    width: 100%;
+}
+
+.valid {
+    background-color: lightgreen;
+}
+
+.invalid {
+    background-color: lightcoral;
 }

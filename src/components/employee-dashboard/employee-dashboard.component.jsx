@@ -25,18 +25,26 @@ const EmployeeDashboard = ({ showLogin=false, showInfo=false, showDelete=false }
                     <Search pullRequest={pullRequest} />
                 </div>
                 <div className='employee-list'>
-                    {employees.length !== 0 ? 
-                        (employees.map((employee) => (
-                            <EmployeeCard key={employee.id} getId={getId} showLogin={showLogin} showInfo={showInfo} showDelete={showDelete} employee={employee} />
-                        )) 
-                    ) : (
-                        <h3>List Is Empty</h3>
-                    )}
+                {employees.length !== 0 ? 
+                    employees.map((employee) => (
+                        <EmployeeCard
+                            key={employee.id}
+                            getId={getId}
+                            showLogin={showLogin}
+                            showInfo={showInfo}
+                            showDelete={showDelete}
+                            employee={employee}
+                        />
+                    )) : 
+                    <h3>List Is Empty</h3>
+                }
                 </div>
             </div>
-            <div className='marg-right employee-info'>
-                <EmployeeInfo employee={employee}/>
-            </div>
+            {showInfo && (
+                <div className='employee-info'>
+                    <EmployeeInfo employee={employee} />
+                </div>
+            )}
         </div>
     )
 }

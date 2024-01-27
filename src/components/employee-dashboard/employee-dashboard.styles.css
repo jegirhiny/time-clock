@@ -1,15 +1,13 @@
 .employee-dashboard {
     display: flex;
-    justify-content: space-between;
-    height: 48vh;
-    width: 81.5vw;
+    width: -webkit-fill-available;
+    padding: 1.5vw 1.5vw;
 }
 
 .employee-table {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 2vh;
     width: 100%;
 }
 
@@ -17,20 +15,20 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    min-height: 4vh;
     width: -webkit-fill-available;
 }
 
 .employee-list {
+    height: -webkit-fill-available;
     width: -webkit-fill-available;
     border: 1px solid lightgray;
-    height: -webkit-fill-available;
     overflow: auto;
 }
 
 .employee-info {
     border: 1px solid lightgray;
-    margin-top: 6vh;
+    border-left: none;
+    margin-top: 4.2vh;
     display: flex;
     width: 100%;
 }

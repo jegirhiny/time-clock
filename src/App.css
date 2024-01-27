@@ -34,7 +34,7 @@ label {
 input {
     display: flex;
     min-height: 3vh;
-    padding: 0 1.25vw;
+    text-indent: 1.25vw;
     border: 1px solid lightgray;
 }
 

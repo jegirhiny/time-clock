@@ -26,7 +26,7 @@ const EmployeeForm = () => {
     return (
         <div className='employee-form'>
             <label>Create Employee</label>
-            <form className='employee-form' onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <input type="text" name='firstName' onChange={handleChange} placeholder='First Name' required/>
                 <input type="text" name='lastName' onChange={handleChange} placeholder='Last Name' required/>
                 <button className='align-right fit cursor'>Submit</button>

@@ -1,12 +1,10 @@
 .nav-bar {
     display: flex;
+    padding: 0 1vw;
     background-color: #eeeeee;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-between;
-    padding-left: 2vw;
     height: 92vh;
-    width: 15vw;
 }
 
 .nav-text {
@@ -14,13 +12,12 @@
     color: #1e1e1e;
 }
 
-.nav-container {
+.nav-item {
     height: 4.5vh;
+    margin-top: 1.5vh;
     display: flex;
     align-items: center;
-    cursor: pointer;
     border-bottom: 1px solid #1e1e1e;
-    width: 10vw;
 }
 
 .image {
@@ -29,20 +26,12 @@
     height: fit-content;
 }
 
-.header {
-    margin-top: 2vh;
-}
-
-.header > * {
-    margin-bottom: 4vh;
-}
-
 .footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 1vw;
     height: 8vh;
-    width: 17vw;
 }
 
 .dark {
