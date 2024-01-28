@@ -2,5 +2,12 @@
     display: flex;
     width: -webkit-fill-available;
     flex-direction: column;
-    height: 100vh;
+    overflow: hidden;
+}
+
+.dashboard-other {
+    display: flex;
+    width: -webkit-fill-available;
+    padding: 1.5vh 1.5vw;
+    min-height: 47vh;
 }

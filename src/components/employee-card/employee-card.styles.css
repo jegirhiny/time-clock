@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid lightgray;
-    padding: 1.5vh 0;
+    padding: 1.3vh 0;
     width: -webkit-fill-available;
 }
 
@@ -13,4 +13,10 @@
 .name-card {
     display: flex;
     align-items: center;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.name-card:hover {
+    color: blue;
 }

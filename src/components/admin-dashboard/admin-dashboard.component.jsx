@@ -5,8 +5,10 @@ import EmployeeDashboard from '../employee-dashboard/employee-dashboard.componen
 const AdminDashboard = () => {
     return (
         <div className='admin-container'>
-            <EmployeeDashboard  showInfo={true} showDelete={true}/>
-            <EmployeeForm />
+            <EmployeeDashboard  isAdmin={true} />
+            <div className='dashboard-other'>
+                <EmployeeForm />
+            </div>
         </div>
     )
 }

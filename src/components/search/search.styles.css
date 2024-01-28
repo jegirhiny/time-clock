@@ -1,0 +1,8 @@
+.search {
+    width: -webkit-fill-available;
+    border-bottom: 1px solid lightgray !important;
+    text-indent: 1.5vw;
+    outline: none;
+    border: none;
+    padding: .65vh 0;
+}

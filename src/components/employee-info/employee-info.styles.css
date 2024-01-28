@@ -1,18 +1,20 @@
+.empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: -webkit-fill-available;
+}
+
 .info-container {
     display: flex;
     flex-direction: column;
     width: -webkit-fill-available;
 }
 
-.info-container > * {
-    padding: 1.5vh 0;
-    width: -webkit-fill-available;
-}
-
 .events {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     height: -webkit-fill-available;
     width: -webkit-fill-available;
 }

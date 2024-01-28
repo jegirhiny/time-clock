@@ -5,7 +5,7 @@ import EmployeeInfo from '../employee-info/employee-info.component.jsx';
 import EmployeeCard from '../employee-card/employee-card.component.jsx';
 import Search from '../search/search.component.jsx';
 
-const EmployeeDashboard = ({ showLogin=false, showInfo=false, showDelete=false }) => {
+const EmployeeDashboard = ({ isAdmin=false }) => {
     const [employees, setEmployees] = useState(sortEmployees(getEmployees()));
     const [employee, setEmployee] = useState('');
 
@@ -19,32 +19,35 @@ const EmployeeDashboard = ({ showLogin=false, showInfo=false, showDelete=false }
 
     return (
         <div className='employee-dashboard'>
+            {/* !! Title and Search Bar */}
+            <div className='employee-top'>
+                <label>Employee Dashboard</label>
+            </div>
+
+            {/* !! Table of Employees */}
             <div className='employee-table'>
-                <div className='employee-top'>
-                    <label>Employee Dashboard</label>
-                    <Search pullRequest={pullRequest} />
-                </div>
-                <div className='employee-list'>
+                <div className={employees.length !== 0 ? 'employee-list' : 'employee-list center'}>
+                <Search pullRequest={pullRequest} />
                 {employees.length !== 0 ? 
                     employees.map((employee) => (
                         <EmployeeCard
                             key={employee.id}
                             getId={getId}
-                            showLogin={showLogin}
-                            showInfo={showInfo}
-                            showDelete={showDelete}
+                            isAdmin={isAdmin}
                             employee={employee}
                         />
                     )) : 
                     <h3>List Is Empty</h3>
                 }
-                </div>
             </div>
-            {showInfo && (
+
+            {/* !! Employee Info Component */}
+            {isAdmin && (
                 <div className='employee-info'>
                     <EmployeeInfo employee={employee} />
                 </div>
             )}
+            </div>
         </div>
     )
 }

@@ -1,6 +1,6 @@
 .nav-bar {
     display: flex;
-    padding: 0 1vw;
+    padding: 0 2vw;
     background-color: #eeeeee;
     flex-direction: column;
     align-items: flex-start;
@@ -35,7 +35,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 1vw;
+    padding: 0 2vw;
     height: 8vh;
     width: max-content;
 }

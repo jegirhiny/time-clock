@@ -17,6 +17,10 @@
     width: 81.5vw;
 }
 
+.login-form {
+    height: 10vh;
+}
+
 .fill > * {
     margin-bottom: 2vh;
 }
@@ -26,5 +30,11 @@
 }
 
 .error {
+    text-align: center;
     color: #ff0000;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
 }

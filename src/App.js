@@ -7,13 +7,11 @@ import EmployeeHome from './components/employee-home/employee-home.component';
 import Login from './components/login/login.component';
 
 function App() {
-  // localStorage.clear();
-
   return (
     <BrowserRouter>
       <Navigation />
       <Routes>
-        <Route exact path="/" element={<EmployeeDashboard showLogin={true} />} />
+        <Route exact path="/" element={<EmployeeDashboard />} />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/employee" element={<EmployeeHome />} />
         <Route exact path="/admin" element={<AdminDashboard />} />

@@ -27,9 +27,12 @@ const Login = () => {
     return (
         <div className='fill'>
             <h3 className='employee-icon'>{employee.firstName.charAt(0)} {employee.lastName.charAt(0)}</h3>
-            <form onSubmit={handleSubmit}>
+            <form className='login-form' onSubmit={handleSubmit}>
                 <input type="password" maxLength={4} onChange={handleChange} placeholder='Password'/>
-                <button>Submit</button>
+                <div className='button-group'>
+                    <button type='button' onClick={() => navigate('/')}>Back</button>
+                    <button type='submit'>Submit</button>
+                </div>
                 <h3 className='error'>{isInvalid ? 'Incorrect Password' : null}</h3>
             </form>
         </div>
