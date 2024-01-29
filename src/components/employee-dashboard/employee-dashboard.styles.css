@@ -6,25 +6,32 @@
     padding: 1.5vh 1.5vw;
 }
 
+.inner-board {
+    display: flex;
+}
+
 .employee-top {
     display: flex;
-    justify-content: space-between;
     flex-direction: row;
     width: -webkit-fill-available;
     margin-bottom: 1.5vh;
+}
+
+.employee-top > * {
+    width: -webkit-fill-available;
 }
 
 .employee-table {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    width: 50%;
 }
 
 .employee-list {
     border: 1px solid lightgray;
-    overflow: auto;
     height: calc(47vh - 2px - 3vh - 1.5vh);
-    width: 50%;
+    width: -webkit-fill-available;
 }
 
 .employee-info {
@@ -38,6 +45,13 @@
 
 .center {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.list-container {
+    height: 38vh;
+    overflow: auto;
+    flex: 1 1;
 }

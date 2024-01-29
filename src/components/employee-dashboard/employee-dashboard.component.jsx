@@ -19,34 +19,33 @@ const EmployeeDashboard = ({ isAdmin=false }) => {
 
     return (
         <div className='employee-dashboard'>
-            {/* !! Title and Search Bar */}
+            {/* !! Title of Component */}
             <div className='employee-top'>
-                <label>Employee Dashboard</label>
+                <div>
+                    <label>Employee Dashboard</label>
+                </div>
+                <div>
+                    {isAdmin &&<label>Employee Info</label>}
+                </div>
             </div>
-
-            {/* !! Table of Employees */}
-            <div className='employee-table'>
-                <div className={employees.length !== 0 ? 'employee-list' : 'employee-list center'}>
-                <Search pullRequest={pullRequest} />
-                {employees.length !== 0 ? 
-                    employees.map((employee) => (
-                        <EmployeeCard
-                            key={employee.id}
-                            getId={getId}
-                            isAdmin={isAdmin}
-                            employee={employee}
-                        />
-                    )) : 
-                    <h3>List Is Empty</h3>
-                }
-            </div>
-
-            {/* !! Employee Info Component */}
-            {isAdmin && (
+            <div className='inner-board'>
+                {/* !! Table of Employees */}
+                <div className='employee-table'>
+                    <div className={employees.length !== 0 ? 'employee-list' : 'employee-list center'}>
+                        {/* !! Search Bar */}
+                        <Search pullRequest={pullRequest} />
+                        {/* !! List of Employees */}
+                        <div className='list-container'>
+                            {employees.length !== 0 ? employees.map(employee => <EmployeeCard key={employee.id} getId={getId} isAdmin={isAdmin} employee={employee} />) : <h3>List Is Empty</h3>}
+                        </div>
+                    </div>
+                </div>
+                {/* !! Employee Info Component */}
+                {isAdmin && (
                 <div className='employee-info'>
                     <EmployeeInfo employee={employee} />
                 </div>
-            )}
+                )}
             </div>
         </div>
     )

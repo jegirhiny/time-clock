@@ -21,9 +21,9 @@ const Navigation = () => {
     return (
         <div className='nav-container'>
             <div className='nav-bar'>
-                <div style={{cursor: 'default'}} className='nav-item'>
+                <div className='nav-item'>
                     <img className='image' src={Clock} alt="Clock Icon" />
-                    <h3 className='nav-text'>{localTime}</h3>
+                    <h3 className='nav-text def-view'>{localTime}</h3>
                 </div>
                 <div className='nav-item' onClick={() => navigate('/admin')}>
                     <img className='image' src={Cog} alt="Cog Icon" />
