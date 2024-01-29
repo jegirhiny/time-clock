@@ -31,11 +31,11 @@ const EmployeeDashboard = ({ isAdmin=false }) => {
             <div className='inner-board'>
                 {/* !! Table of Employees */}
                 <div className='employee-table'>
-                    <div className={employees.length !== 0 ? 'employee-list' : 'employee-list center'}>
+                    <div className='employee-list'>
                         {/* !! Search Bar */}
                         <Search pullRequest={pullRequest} />
                         {/* !! List of Employees */}
-                        <div className='list-container'>
+                        <div className={employees.length !== 0 ? '' : 'center'}>
                             {employees.length !== 0 ? employees.map(employee => <EmployeeCard key={employee.id} getId={getId} isAdmin={isAdmin} employee={employee} />) : <h3>List Is Empty</h3>}
                         </div>
                     </div>
