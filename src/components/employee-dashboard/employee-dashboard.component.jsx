@@ -1,9 +1,11 @@
 import './employee-dashboard.styles.css';
 import { useState } from 'react';
 import { getEmployeeById, getEmployees, sortEmployees } from '../../static/employee-utils.js';
+import Announcements from '../announcements/announcements.component.jsx';
 import EmployeeInfo from '../employee-info/employee-info.component.jsx';
 import EmployeeCard from '../employee-card/employee-card.component.jsx';
 import Search from '../search/search.component.jsx';
+
 
 const EmployeeDashboard = ({ isAdmin=false }) => {
     const [employees, setEmployees] = useState(sortEmployees(getEmployees()));
@@ -25,7 +27,7 @@ const EmployeeDashboard = ({ isAdmin=false }) => {
                     <label>Employee Dashboard</label>
                 </div>
                 <div>
-                    {isAdmin &&<label>Employee Info</label>}
+                    {isAdmin ? <label>Employee Info</label> : <label>Announcements</label>}
                 </div>
             </div>
             <div className='inner-board'>
@@ -40,12 +42,10 @@ const EmployeeDashboard = ({ isAdmin=false }) => {
                         </div>
                     </div>
                 </div>
-                {/* !! Employee Info Component */}
-                {isAdmin && (
+                {/* !! Announcement / Info Component */}
                 <div className='employee-info'>
-                    <EmployeeInfo employee={employee} />
+                    {isAdmin ? <EmployeeInfo employee={employee} /> : <Announcements />}
                 </div>
-                )}
             </div>
         </div>
     )
