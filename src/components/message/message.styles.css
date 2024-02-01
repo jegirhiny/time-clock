@@ -15,7 +15,7 @@
     display: flex;
 }
 
-.message-top > h3:not(:first-child) {
+.message-top > h4:not(:first-child) {
     margin-left: 1vw;
 }
 
@@ -27,6 +27,11 @@
 
 .message-bot {
     margin-top: 1vh;
+}
+
+.message h4 {
+    font-weight: 400;
+    font-size: 14px;
 }
 
 .high {

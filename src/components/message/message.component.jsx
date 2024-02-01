@@ -4,11 +4,11 @@ const Message = ({ author, priority, text, date}) => {
     return (
         <div className='message'>
             <div className='message-top'>
-                <h3 className={priority.toLowerCase()}>{priority}</h3>
-                <h3>{author}</h3>
-                <h3>{date}</h3>
+                <h4 className={priority.toLowerCase()}>{priority}</h4>
+                <h4>{author}</h4>
+                <h4>{date}</h4>
             </div>
-            <h3 className='message-bot'>{text}</h3>
+            <h4 className='message-bot'>{text}</h4>
         </div>
     )
 }
