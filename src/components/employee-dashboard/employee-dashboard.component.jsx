@@ -23,16 +23,16 @@ const EmployeeDashboard = ({ isAdmin=false }) => {
         <div className='employee-dashboard'>
             {/* !! Title of Component */}
             <div className='employee-top'>
-                <div>
+                <div className='marg-right'>
                     <label>Employee Dashboard</label>
                 </div>
-                <div>
+                <div className='marg-left'>
                     {isAdmin ? <label>Employee Info</label> : <label>Announcements</label>}
                 </div>
             </div>
             <div className='inner-board'>
                 {/* !! Table of Employees */}
-                <div className='employee-table'>
+                <div className='marg-right employee-table'>
                     <div className='employee-list'>
                         {/* !! Search Bar */}
                         <Search pullRequest={pullRequest} />
@@ -43,7 +43,7 @@ const EmployeeDashboard = ({ isAdmin=false }) => {
                     </div>
                 </div>
                 {/* !! Announcement / Info Component */}
-                <div className='employee-info'>
+                <div className='marg-left employee-info'>
                     {isAdmin ? <EmployeeInfo employee={employee} /> : <Announcements />}
                 </div>
             </div>
