@@ -5,7 +5,7 @@ const TimeCard = ({ event }) => {
         <div className='time-card'>
             <h3>{event.date}</h3>
             <h3>{event.time}</h3>
-            <h3 className={event.status ? 'valid' : 'invalid'}>{event.status ? 'IN' : 'OUT'}</h3>
+            <h3 className={`round ${event.status ? 'valid' : 'invalid'}`}>{event.status ? 'IN' : 'OUT'}</h3>
         </div>
     )
 }

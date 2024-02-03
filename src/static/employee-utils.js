@@ -34,9 +34,9 @@ const getEmployeeById = (id) => {
     return getEmployees().find(employee => employee.id === id);
 }
 
-const createEmployee = ({firstName, lastName, password, status, history}) => {
+const createEmployee = ({firstName, lastName, password, status, history, firstLogin}) => {
     const prevEmployees = hasEmployees() ? getEmployees() : [];
-    localStorage.setItem('employees', JSON.stringify([...prevEmployees, {id: uuidv4(), firstName, lastName, password, status, history}]));
+    localStorage.setItem('employees', JSON.stringify([...prevEmployees, {id: uuidv4(), firstName, lastName, password, status, history, firstLogin}]));
     window.location.reload();
 }
 
@@ -58,4 +58,12 @@ const setstatus = (id) => {
     localStorage.setItem('employees', JSON.stringify(getEmployees().map(employee => (employee.id === id) ? { ...employee, status: !employee.status } : employee)));
 }
 
-export { hasEmployees, getEmployees, sortEmployees, getEmployeesByName, getEmployeeById, createEmployee, setstatus, getstatus, removeEmployee, logTime };
+const setFirstLogin = (id) => {
+    localStorage.setItem('employees', JSON.stringify(getEmployees().map(employee => (employee.id === id) ? { ...employee, firstLogin: false } : employee)));
+}
+
+const setPassword = (id, password) => {
+    localStorage.setItem('employees', JSON.stringify(getEmployees().map(employee => (employee.id === id) ? { ...employee, password: password } : employee)));
+}
+
+export { hasEmployees, getEmployees, sortEmployees, getEmployeesByName, getEmployeeById, createEmployee, setstatus, getstatus, removeEmployee, logTime, setFirstLogin, setPassword};

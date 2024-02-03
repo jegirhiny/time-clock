@@ -17,3 +17,7 @@
 .invalid {
     background-color: lightcoral;
 }
+
+.round {
+    border-radius: 15px;
+}
