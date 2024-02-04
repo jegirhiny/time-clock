@@ -24,10 +24,10 @@ const EmployeeDashboard = ({ isAdmin=false }) => {
             {/* !! Title of Component */}
             <div className='employee-top'>
                 <div className='marg-right'>
-                    <label>Employee Dashboard</label>
+                    {isAdmin ? <label>Admin Dashboard</label> : <label>Employee Dashboard</label>}
                 </div>
                 <div className='marg-left'>
-                    {isAdmin ? <label>Employee Info</label> : <label>Announcements</label>}
+                    {isAdmin ? <label>Employee Info</label> : <label>Reminders</label>}
                 </div>
             </div>
             <div className='inner-board'>
@@ -37,7 +37,7 @@ const EmployeeDashboard = ({ isAdmin=false }) => {
                         {/* !! Search Bar */}
                         <Search pullRequest={pullRequest} />
                         {/* !! List of Employees */}
-                        <div className={employees.length !== 0 ? '' : 'center'}>
+                        <div className={employees.length !== 0 ? 'list-container' : 'center'}>
                             {employees.length !== 0 ? employees.map(employee => <EmployeeCard key={employee.id} getId={getId} isAdmin={isAdmin} employee={employee} />) : <h3>List Is Empty</h3>}
                         </div>
                     </div>

@@ -33,12 +33,12 @@
     flex-direction: column;
     border: 1px solid lightgray;
     height: calc(47vh - 2px - 3vh - 1.5vh);
-    border-radius: 15px;
+    border-radius: 15px 15px 0 0;
     width: -webkit-fill-available;
 }
 
 .employee-info {
-    border-radius: 15px;
+    border-radius: 15px 15px 0 0;
     border: 1px solid lightgray;
     display: flex;
     overflow: auto;

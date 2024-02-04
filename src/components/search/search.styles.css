@@ -1,6 +1,6 @@
 .search {
     width: -webkit-fill-available;
-    border-radius: 15px;
+    border-radius: 15px 15px 0 0;
     border-bottom: 1px solid lightgray !important;
     text-indent: 1.5vw;
     outline: none;

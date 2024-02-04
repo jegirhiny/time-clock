@@ -17,4 +17,15 @@ const getEmployeeTime = () => {
     }
 }
 
-export { getTime, getEmployeeTime }
+const getTimeDifference = (fromHistory, toHistory) => {
+    const fromDateTime = new Date(`${fromHistory.date}`);
+    const toDateTime = new Date(`${toHistory.date}`);
+
+    if (toDateTime > fromDateTime) {
+        return true;
+    }
+
+    return false;
+};
+
+export { getTime, getEmployeeTime, getTimeDifference }

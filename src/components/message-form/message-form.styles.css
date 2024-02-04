@@ -1,0 +1,6 @@
+.message-area {
+    min-height: 7vh;
+    min-width: 15vw;
+    overflow-wrap: break-word;
+    border: 1px solid lightgray;
+}

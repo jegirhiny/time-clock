@@ -1,3 +1,11 @@
 .message-container {
     width: -webkit-fill-available;
 }
+
+.center-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
